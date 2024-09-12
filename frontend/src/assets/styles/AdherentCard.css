@@ -1,0 +1,186 @@
+.adherentsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+}
+
+.adherentCard {
+  width: 25%;
+  min-width: 400px;
+  min-height: 115px;
+  border: var(--color-pink) solid 3px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  color: #050505;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adherentCard.invalid {
+  background-color: var(--color-purple); 
+}
+
+.adherentCard.invalid p,
+.adherentCard.invalid h1 {
+  color: #f5f5f5;
+}
+
+.adherent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.adherent-info {
+  flex: 1;
+}
+
+.adherent-info h1 {
+  font-size: 22px;
+}
+
+.adherent-id,
+.adherent-end-date {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 5px;
+}
+
+.collapse-btn {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.collapse-btn:hover {
+  background-color: #2980b9;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999 !important;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 450px;
+  max-width: 90%;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  z-index: 3;
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.modal-content label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+  color: #2c3e50;
+}
+
+.modal-content input, .modal-content select {
+  width: calc(100% - 25px);
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content input:focus, .modal-content select:focus {
+  border-color: var(--color-pink);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+.btn-action {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  margin-top: 20px;
+}
+
+.btn-update {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.btn-update:hover {
+  background-color: #27ae60;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #c0392b;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 768px) {
+  .adherentCard {
+    width: 80vw;
+    min-width: 0;
+  }
+
+  .adherent-header {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .adherent-header .collapse-btn {
+    margin-top: 15px;
+    margin-left: auto;
+  }
+}

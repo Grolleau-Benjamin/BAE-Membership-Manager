@@ -1,0 +1,14 @@
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: Bae-App-DB
+    ports:
+      - "3001:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: oa1rsq3KOJAwWFhyauxpInmqchosCIHu9d4iCCHKxjY0BZjmhO
+      MONGO_INITDB_DATABASE: baeAppDB
+    volumes:
+      - ./data/db:/data/db
+      - ./tmp/init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js
+    restart: unless-stopped

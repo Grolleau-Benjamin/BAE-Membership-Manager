@@ -1,0 +1,21 @@
+print('Starting database initialization...');
+
+db = db.getSiblingDB('$MONGO_DB_NAME');
+
+db.createUser({
+  user: "$MONGO_USER",
+  pwd: "$MONGO_USER_PASSWORD",
+  roles: [{
+    role: "readWrite",
+    db: '$MONGO_DB_NAME'
+  }]
+});
+
+db.createCollection('adherents');
+db.createCollection('users');
+
+db.users.insertMany([
+  { login: "bgrolleau001", password: "bgrolleau001", role: "admin" }
+]);
+
+print('Database initialization completed.');
