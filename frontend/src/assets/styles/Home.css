@@ -127,7 +127,7 @@
   background-color: #ffeaea;
   color: #e74c3c;
   border-radius: 5px;
-  width: 100%;
+  width: calc(100% - 20px);
   font-size: 16px;
   gap: 10px;
 }

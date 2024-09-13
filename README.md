@@ -108,6 +108,9 @@ The project uses **MongoDB** for managing users and members. MongoDB is set up u
    docker-compose up
    ```
 
+## Run the application in production mode
+To deploy the application in production mode, the database setup should have been done. Then, juste run `npm run prod` in the root project directory. Don't forgot to change the environment variables.
+
 ## Screenshots
 ### 1. Login page
 ![login computer](./img/login1.png)

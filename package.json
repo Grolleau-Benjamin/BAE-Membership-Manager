@@ -5,9 +5,15 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npm run db:up\" \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "build": "concurrently \"npm run backend:build\" \"npm run frontend:build\"",
+    "prod": "concurrently \"npm run db:up\" \"npm run frontend:prod\" \"npm run backend:prod\"", 
     "db:up": "cd db && docker compose up -d",
-    "backend:dev": "cd backend && npm run start:dev", 
-    "frontend:dev": "cd frontend && npm run dev"
+    "backend:dev": "cd backend && npm run start:dev",
+    "backend:build": "cd backend && npm run build",
+    "backend:prod": "cd backend && npm run build && npm run start:prod", 
+    "frontend:dev": "cd frontend && npm run dev",
+    "frontend:build": "cd frontend && npm run build", 
+    "frontend:prod": "cd frontend && npm run prod"
   },
   "keywords": [],
   "author": "",

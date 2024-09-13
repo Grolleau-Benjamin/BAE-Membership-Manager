@@ -25,7 +25,10 @@ src/
   ```env
   VITE_API_URL=http://localhost:3005/api
   ```
-  This variable should point to the backend API URL. (<fontend_address>/api because of the vite_proxy)
+  This variable should point to the backend API URL. (<fontend_address>/api because of the vite_proxy). You also must have to create a production env file `.env.production` for the release state. 
+  ```env
+  VITE_API_URL=https://public-api.domain.com
+  ```
 
 3. Start the project
   ```bash
