@@ -14,6 +14,11 @@ The BAE App consists of two main parts:
 - **Secure Authentication**: Uses **JWT** to secure access and authenticate users.
 - **Intuitive Interface**: User and member management is centralized and made easy through clear and simple interfaces.
 
+### Ports in dev-mode
+- **Frontend**: 3005
+- **Backend**: 3006
+- **DataBase**: 3007
+
 ## Setting Up the Application
 
 The application consists of three parts to install and configure: the frontend, the backend, and the MongoDB database.
@@ -30,7 +35,7 @@ The frontend is built with **React** and **Vite**. Here's how to configure it:
 2. **Configure environment variables**:
    Create a `.env` file in the `frontend/` directory with the following variable:
    ```env
-   VITE_API_URL=http://localhost:3002/api
+   VITE_API_URL=http://localhost:3005/api
    ```
 
 3. **Start the application**:
@@ -59,7 +64,7 @@ The backend uses **NestJS**, a modern and efficient Node.js framework. To config
    jwt: 
      secret: <long-string> # JWT Secret
    mongoose:
-     port: 27017
+     port: 3007
      dbName: baeAppDB
      user: <db-user>
      password: <db-password>
@@ -83,7 +88,7 @@ The project uses **MongoDB** for managing users and members. MongoDB is set up u
 1. **Configure environment variables**:
    Create a `.env` file in the `db/` directory with the following information:
    ```env
-   MONGO_PORT=27017
+   MONGO_PORT=3007
    MONGO_INITDB_ROOT_USERNAME=root
    MONGO_INITDB_ROOT_PASSWORD=root_password
    MONGO_DB_NAME=baeAppDB

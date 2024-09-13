@@ -23,7 +23,7 @@ src/
 
 2. Configure the environment variables in the `.env` file.
   ```env
-  VITE_API_URL=http://localhost:3002/api
+  VITE_API_URL=http://localhost:3005/api
   ```
   This variable should point to the backend API URL. (<fontend_address>/api because of the vite_proxy)
 

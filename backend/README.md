@@ -12,7 +12,7 @@ This project is a RESTful API built using the [NestJS](https://nestjs.com/) fram
   jwt: 
     secret: <string> Should be long
   mongoose:
-    port: <number> db listening port
+    port: <number>{3007} db listening port
     dbName: <string> db name
     user: <string> user for the db login
     password: <string> password for the db login

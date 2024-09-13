@@ -13,7 +13,7 @@ Ensure that you have the following installed on your system:
 You need to set up the following environment variables in a `.env` file:
 
 ```env
-MONGO_PORT=3001
+MONGO_PORT=3007
 MONGO_INITDB_ROOT_USERNAME=root
 MONGO_INITDB_ROOT_PASSWORD=root_password
 MONGO_DB_NAME=db_name
