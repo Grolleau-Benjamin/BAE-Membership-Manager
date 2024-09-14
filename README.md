@@ -2,6 +2,9 @@
 
 BAE App is an application designed to simplify membership management for a French association. This project is a **side project** developed by a first-year engineering student specializing in networks and computer science. The application allows for efficient and centralized management of users and members through a user-friendly interface and a secure backend. This project have also been a occasion to discover and make a first NestJS project.
 
+# WARNING
+Don't forget to change `bgrolleau001`'s password after the first login. 
+
 ## How the Application Works
 
 The BAE App consists of two main parts:

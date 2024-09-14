@@ -1,5 +1,6 @@
 services:
   nginx:
+    container_name: Bae-App-Frontend
     build: .
     ports:
       - "3005:3005"

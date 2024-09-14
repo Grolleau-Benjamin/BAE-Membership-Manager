@@ -19,7 +19,9 @@ MONGO_INITDB_ROOT_PASSWORD=root_password
 MONGO_DB_NAME=db_name
 MONGO_USER=user
 MONGO_USER_PASSWORD=user_password
+HASHED_PASSWORD=$2a$10$jCmWf3Rc1j.BDCzMkGzVfeoudruQ2i/SdyngSOqXyaP0I.nOUG94S
 ```
+Be careful to copy and paste the last line
 
 ### Explanation of Environment Variables:
 - `MONGO_PORT`: The port where MongoDB will run.
@@ -28,6 +30,7 @@ MONGO_USER_PASSWORD=user_password
 - `MONGO_DB_NAME`: The name of the application database.
 - `MONGO_USER`: The username that will be created for accessing the application database.
 - `MONGO_USER_PASSWORD`: The password for the application user.
+- `HASHED_PASSWORD`: Bcrypt password for basic user login *bgrolleau001:bgrolleau001*
 
 ## How to Initialize the MongoDB Database
 

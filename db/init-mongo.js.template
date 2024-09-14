@@ -14,8 +14,9 @@ db.createUser({
 db.createCollection('adherents');
 db.createCollection('users');
 
+// login: bgrolleau001:bgrolleau001
 db.users.insertMany([
-  { login: "bgrolleau001", password: "bgrolleau001", role: "admin" }
+  { username: "bgrolleau001", password: "$HASHED_PASSWORD", role: "admin" }
 ]);
 
 print('Database initialization completed.');
